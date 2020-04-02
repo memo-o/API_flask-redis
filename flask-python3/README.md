@@ -3,7 +3,7 @@
 ## Build it
 
 ```
-docker build -t flask-python-sample:latest .
+docker build -t flask-python:latest .
 ```
 
 Or with docker-compose
@@ -15,7 +15,7 @@ docker-compose build
 ## Run it
 
 ```
-docker run -d -p 5000:5000 flask-python-sample
+docker run -d --network=mynet --name flaskpy -p 5000:5000 flask-python
 ```
 
 Or with docker-compose
@@ -27,7 +27,7 @@ docker-compose up -d
 ## Access to the shell
 
 ```
-docker exec -ti flask-python-sample /bin/bash
+docker exec -ti flask-python /bin/bash
 ```
 
 ### Note
